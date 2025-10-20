@@ -1,0 +1,48 @@
+body{
+    background-color: silver;
+}
+:root{
+    --background-color: rgb(54, 54, 231);
+    --background-color2: silver;
+    --text-color: whitesmoke;
+}
+body{
+    background-color: var(--background-color2);
+}
+h1{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 5px;
+}
+img {
+    width: 200px;
+    
+  }  
+.about{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.quiz{
+    display: inline;
+    padding: 5%;
+}
+.quiz ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.quiz li{
+    display: inline;
+}
+.quiz a{
+    padding: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: darkgray;
+    border-radius: 5px;
+    font-size: 25px;
+}
