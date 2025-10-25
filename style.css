@@ -1,0 +1,97 @@
+/* General body setup with gradient background and centered layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* White card container for login/signup */
+.auth-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Group styling for each label + input */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Label Text */
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Highlight input when focused */
+input:focus {
+    border-color: #2575fc;
+}
+
+/* Primary button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2575fc;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Button hover effect */
+button:hover {
+    background: #6a11cb;
+}
+
+/* Link text for switching pages */
+p.redirect-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* Make link text blue and remove underline */
+p.redirect-text a {
+    color: #2575fc;
+    text-decoration: none;
+}
+
+/* Underline on hover for better UX */
+p.redirect-text a:hover {
+    text-decoration: underline;
+}
+
+/* Error and success message styling */
+#error-message, signup-message {
+    margin-top: 10px;
+    color: red;
+    font-size: 0.9em;
+}
