@@ -1,30 +1,51 @@
 body{
-    background-color: silver;
-}
-:root{
-    --background-color: rgb(54, 54, 231);
-    --background-color2: silver;
-    --text-color: whitesmoke;
-}
-body{
-    background-color: var(--background-color2);
-}
-h1{
-    background-color: var(--background-color);
-    color: var(--text-color);
-    text-align: center;
-    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
 }
 img {
     width: 200px;
-    
-  }  
-.about{
-    background-color: var(--background-color);
-    color: var(--text-color);
+  }
+.head{
+    background-color: white;
+    color: #333;
+    text-align: center;
+    border-radius: 16px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.acct{
+    background-color: white;
+    color: #333;
+    text-align: center;
+    border-radius: 16px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.acct a {
+    padding: 5px;
+    color: #333;
+    text-decoration: none;
+    background-color: darkgray;
     border-radius: 5px;
-    padding-left: 10px;
-    font-size: 20px;
+    font-size: 15px;
+    display: inline;
+    
+}
+.about{
+    background-color: white;
+    color: #333;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .quiz{
     display: inline;
@@ -40,7 +61,7 @@ img {
 }
 .quiz a{
     padding: 5px;
-    color: var(--text-color);
+    color: #333;
     text-decoration: none;
     background-color: darkgray;
     border-radius: 5px;
