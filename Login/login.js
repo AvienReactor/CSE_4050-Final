@@ -18,7 +18,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     // If user found -> log in and redirect
     if(user) {
         localStorage.setItem("loggedInUser", username); // Save Login session
-        window.location.href = "home.html"; // Redirect to home page
+        window.location.href = "../home.html"; // Redirect to home page
     }
     else {
         errorMessage.textContent = "Invalid username or password."; // If not found -> show error
