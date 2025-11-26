@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+  }
+  
+  nav {
+      background: #000000;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+  .nav-brand {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-links button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+  
+  .nav-links button.active,
+  .nav-links button:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  header {
+    text-align: center;
+    padding: 25px 10px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .question {
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+  
+  .question input {
+    margin-top: 6px;
+    width: 100%;
+    max-width: 350px;
+    padding: 6px;
+    font-size: 15px;
+  }
+  
+  .test-section {
+    display: none;
+  }
+  
+  .test-section.active {
+    display: block;
+  }
+  
+  .submit-btn {
+    background: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background: #357abd;
+  }
+  
+  .result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .word-bank {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f0f4ff;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  
+  .word-bank strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
