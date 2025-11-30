@@ -1,12 +1,12 @@
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     margin: 0;
 }
 img {
     width: 200px;
-  }
-.head{
+}
+.head {
     background-color: white;
     color: #333;
     text-align: center;
@@ -15,7 +15,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-.acct{
+.acct {
     background-color: white;
     color: #333;
     text-align: center;
@@ -34,9 +34,8 @@ img {
     border-radius: 5px;
     font-size: 15px;
     display: inline;
-    
 }
-.about{
+.about {
     background-color: white;
     color: #333;
     padding: 40px 50px;
@@ -47,23 +46,48 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-.quiz{
+.quiz {
     display: inline;
     padding: 5%;
 }
-.quiz ul{
+.quiz ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
 }
-.quiz li{
+.quiz li {
     display: inline;
 }
-.quiz a{
+.quiz a {
     padding: 5px;
     color: #333;
     text-decoration: none;
     background-color: darkgray;
     border-radius: 5px;
     font-size: 25px;
+}
+
+.quiz-list ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.quiz-list li {
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+}
+
+.quiz-list a {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    background-color: darkgray;
+    border-radius: 5px;
+    font-size: 20px;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
 }

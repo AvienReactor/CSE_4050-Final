@@ -1,5 +1,5 @@
 // Listen for the login form submission
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     // Get input values
@@ -16,12 +16,36 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     );
 
     // If user found -> log in and redirect
-    if(user) {
+    if (user) {
         localStorage.setItem("loggedInUser", username); // Save Login session
-        window.location.href = "../home.html"; // Redirect to home page
+        window.location.href = "../dashboard.html"; // Redirect to dashboard page
     }
     else {
         errorMessage.textContent = "Invalid username or password."; // If not found -> show error
     }
 
+    try {
+        // Send login data to server
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: username, password: password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            localStorage.setItem("loggedInUser", username); // Save Login session
+            errorMessage.color = "green";
+            errorMessage.textContent = "Login successful! Redirecting...";
+            window.location.href = "../dashboard.html"; // Redirect to dashboard page
+        } else {
+            errorMessage.color = "red";
+            errorMessage.textContent = data.error || "Invalid email or password.";
+        }
+    } catch (error) {
+        errorMessage.textContent = "Network error. Please try again later.";
+    }
 });

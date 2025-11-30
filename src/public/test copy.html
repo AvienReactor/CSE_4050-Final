@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="nav-brand">5th Grade Practice Tests</div>
+            <div class="nav-links">
+                <button type="button" class="active" onclick="showTest('math')">
+                    Math
+                </button>
+                <button type="button" onclick="showTest('science')">
+                    Science
+                </button>
+                <button type="button" onclick="showTest('history')">
+                    History
+                </button>
+                <button type="button" onclick="showTest('english')">
+                    English
+                </button>
+            </div>
+        </nav>
+
+        <header>
+            <h1 id="test-title">Temp Title</h1>
+        </header>
+
+        <form
+            id="quiz-form"
+            class="test-section active"
+            onsubmit="return false;"
+        >
+            <div id="questions-container" class="question"></div>
+            <button type="submit" class="submit-btn">Submit Math Test</button>
+        </form>
+        <p id="result" class="result"></p>
+
+        <script src="./test copy.js"></script>
+    </body>
+</html>
