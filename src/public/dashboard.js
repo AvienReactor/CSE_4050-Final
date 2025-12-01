@@ -7,7 +7,7 @@ async function loadDashboard() {
     }
 
     const data = await res.json();
-    document.getElementById('user-name').textContent = `${data.user.email}`;
+    document.getElementById('user-name').textContent = `${data.user.username}`;
 }
 
 async function loadQuizHistory() {

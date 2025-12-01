@@ -3,10 +3,10 @@ const bcrypt = require('bcrypt')
 require('dotenv').config()
 
 const pool = mysql.createPool({
-    host: process.env.MYSQL_HOST || '127.0.0.1',
-    user: process.env.MYSQL_USER || 'root',
-    password: process.env.MYSQL_PASSWORD || 'Admin1234!',
-    database: process.env.MYSQL_DATABASE || 'website',
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
 });
 
 async function getUsers() {
@@ -19,23 +19,23 @@ async function getUser(id) {
     return rows[0];
 }
 
-async function createUser(email, password) {
-    const existingUser = await findUser(email);
+async function createUser(username, password) {
+    const existingUser = await findUser(username);
     if (existingUser) {
         throw new Error('User already exists');
     }
     const hashedPassword = await bcrypt.hash(password, 10);
-    const [result] = await pool.query('INSERT INTO users (email, pass) VALUES (?, ?)', [email, hashedPassword]);
+    const [result] = await pool.query('INSERT INTO users (username, pass) VALUES (?, ?)', [username, hashedPassword]);
     return result.insertId;
 }
 
-async function findUser(email) {
-    const [rows] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
+async function findUser(username) {
+    const [rows] = await pool.query('SELECT * FROM users WHERE username = ?', [username]);
     return rows[0];
 }
 
-async function verifyUser(email, password) {
-    const user = await findUser(email);
+async function verifyUser(username, password) {
+    const user = await findUser(username);
     const isPasswordValid = await bcrypt.compare(password, user.pass);
     return isPasswordValid;
 }

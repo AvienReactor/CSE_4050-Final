@@ -3,20 +3,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EnglishPage</title>
+    <title>English Quizzes</title>
     <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-    <nav class="quiz">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="science.html">Science</a></li>
-            <li><a href="english.html">English</a></li>
-            <li><a href="history.html">History</a></li>
-        </ul>
+    <nav class="nav-base">
+        <div class="nav-brand">English</div>
+        <div class="nav-links">
+            <button type="button" onclick="window.location.href='home.html'">
+                Home
+            </button>
+            <button
+                type="button"
+                onclick="window.location.href='dashboard.html'"
+            >
+                Dashboard
+            </button>
+            <button type="button" onclick="window.location.href='math.html'">
+                Math
+            </button>
+            <button type="button" onclick="window.location.href='science.html'">
+                Science
+            </button>
+            <button type="button" onclick="window.location.href='history.html'">
+                History
+            </button>
+        </div>
     </nav>
-    <div>
-        <h1>English Tests</h1>
-        <p>Test your knowledge on english from Grades 1 to 6.</p>
+    <div class="about">
+        <h1>English Quizzes</h1>
+        <p>Test your knowledge on English from Grades 1 to 6.</p>
+        <h2>Available Quizzes:</h2>
+        <ul class="quiz-list">
+            <li>
+                <a href="./quiz.html?quizId=14">Grade 1 English Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=15">Grade 2 English Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=16">Grade 3 English Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=17">Grade 4 English Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=18">Grade 5 English Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=19">Grade 6 English Quiz</a>
+            </li>
+        </ul>
     </div>
 </body>

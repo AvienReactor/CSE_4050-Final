@@ -25,7 +25,7 @@ async function loadQuiz() {
     questionsContainer.innerHTML = '';
 
     quiz.questions.forEach((q, index) => {
-      const questionDiv = document.createElement('div');
+      const questionDiv = document.createElement('div', id = 'question2');
       questionDiv.className = 'question';
 
       const label = document.createElement('label');

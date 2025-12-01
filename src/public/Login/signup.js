@@ -8,11 +8,19 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     const confirmPassword = document.getElementById("confirmPassword").value.trim();
     const message = document.getElementById("signup-message");
 
-    // Check if email is valid
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(newUsername)) {
+    // Check if username is valid
+    const usernameRequirment = /^[a-zA-Z0-9]{5,50}$/;
+    if (!usernameRequirment.test(newUsername)) {
         message.style.color = "red";
-        message.textContent = "Please enter a valid email address.";
+        message.textContent = "Please enter a valid username. Must be between 5 and 50 characters, letters and numbers only.";
+        return;
+    }
+
+    // Check if password is valid
+    const passwordRequirment = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,100}$/;
+    if (!passwordRequirment.test(newPassword)) {
+        message.style.color = "red";
+        message.textContent = "Please enter a valid password. Must be at least 8 characters long and include uppercase, lowercase, numbers, and special characters.";
         return;
     }
 
@@ -42,7 +50,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ email: newUsername, password: newPassword })
+            body: JSON.stringify({ username: newUsername, password: newPassword })
         });
 
         const data = await response.json();
@@ -55,7 +63,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             }, 1500);
         } else {
             message.style.color = "red";
-            message.textContent = data.error || "email already exists.";
+            message.textContent = data.error || "username already exists.";
             return;
         }
     } catch (error) {

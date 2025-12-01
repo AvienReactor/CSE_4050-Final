@@ -3,20 +3,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HistoryPage</title>
+    <title>History Quizzes</title>
     <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
-    <nav class="quiz">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="science.html">Science</a></li>
-            <li><a href="english.html">English</a></li>
-            <li><a href="history.html">History</a></li>
-        </ul>
+    <nav class="nav-base">
+        <div class="nav-brand">History</div>
+        <div class="nav-links">
+            <button type="button" onclick="window.location.href='home.html'">
+                Home
+            </button>
+            <button
+                type="button"
+                onclick="window.location.href='dashboard.html'"
+            >
+                Dashboard
+            </button>
+            <button type="button" onclick="window.location.href='math.html'">
+                Math
+            </button>
+            <button type="button" onclick="window.location.href='science.html'">
+                Science
+            </button>
+            <button type="button" onclick="window.location.href='english.html'">
+                English
+            </button>
+        </div>
     </nav>
-    <div>
-        <h1>History Tests</h1>
+    <div class="about">
+        <h1>History Quizzes</h1>
         <p>Test your knowledge on history from Grades 1 to 6.</p>
+        <h2>Available Quizzes:</h2>
+        <ul class="quiz-list">
+            <li>
+                <a href="./quiz.html?quizId=20">Grade 1 History Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=21">Grade 2 History Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=22">Grade 3 History Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=23">Grade 4 History Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=24">Grade 5 History Quiz</a>
+            </li>
+            <li>
+                <a href="./quiz.html?quizId=25">Grade 6 History Quiz</a>
+            </li>
+        </ul>
     </div>
 </body>

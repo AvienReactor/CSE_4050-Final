@@ -1,15 +1,3 @@
-// const fs = require("fs");
-
-// const content = "This is content for file";
-// fs.writeFile("test.txt", content, (err) => {
-//     if (err) {
-//         console.log("Error is occurred during writing");
-//     }
-//     else {
-//         console.log("Write was success");
-//     }
-// });
-
 const express = require("express");
 const app = express();
 const session = require('express-session');

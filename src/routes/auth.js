@@ -3,15 +3,15 @@ const { verifyUser, findUser } = require('../database');
 const router = express.Router();
 
 router.post('/login', async (req, res) => {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
     try {
-        const isValid = await verifyUser(email, password);
+        const isValid = await verifyUser(username, password);
         if (!isValid) {
-            res.status(401).json({ error: 'Invalid email or password' });
+            res.status(401).json({ error: 'Invalid username or password' });
         }
-        const user = await findUser(email);
-        req.session.user = { id: user.id, email: user.email };
+        const user = await findUser(username);
+        req.session.user = { id: user.id, username: user.username };
         res.status(200).json({ message: 'Login successful' });
     } catch (error) {
         res.status(500).json({ error: error.message });
